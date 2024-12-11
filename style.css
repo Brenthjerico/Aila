@@ -171,3 +171,55 @@ button {
     transform: scale(1.1);
 }
 
+#giftPopup {
+    display: none;
+    max-width: 90%; /* Limit the width for smaller screens */
+    max-height: 80%; /* Limit the height to prevent overflow */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    overflow-y: auto; /* Allow scrolling for overflow content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+.gift {
+    width: 100px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+}
+
+.closeGift {
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Position the close button in the top-right */
+    right: 10px; /* Adjust the right position */
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #ff6f61; /* Keep the close button color consistent */
+}
+
+@media (max-width: 768px) {
+    #giftPopup {
+        max-width: 95%; /* Slightly larger width for very small screens */
+        max-height: 75%; /* Adjust height for mobile devices */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    #giftPopup p {
+        font-size: 14px; /* Smaller font size for readability */
+    }
+
+    .gift {
+        width: 80px; /* Adjust gift image size for small screens */
+    }
+}
