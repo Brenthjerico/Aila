@@ -118,13 +118,14 @@ button {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 2px solid #ff6f61;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #d4200f;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(214, 173, 173, 0.2);
     z-index: 1000;
     text-align: center;
+    
 }
 
 .gift {
