@@ -28,11 +28,22 @@
             <p>click the pictures</p>
         </div>
         <button id="giftButton" onclick="showGift()">🎁 BIG SURPRISE</button>
-        <div id="giftPopup" style="display: none;">
-            <button class="closeGift" onclick="closeGiftPopup()">✖</button>
-            <p>Happy 58 months of loving love. Inaramidan ka iti code love tapno ma feel mo met maaramidan iti website para lang kanyam love. Every effort ko nga nagaramid atuy love ket dedicated amin para kanyam lang sika ti kauna unahan nga incodak iti kastuy kabayak kin romantic. Oray narigat ket aramidek para kanyam lang love oray natrabaho. Stay strong kanyata love, More laughs kin away haahhah Celebrate ta man iti monthsary'n nag pardas love. Happy monthsary and ILOVEYOU LOVE❤️</p>
-            <img src="gift.jpg" alt="Gift" class="gift">
-        </div>
+<div id="giftPopup" style="display: none;">
+    <button class="closeGift" onclick="closeGiftPopup()">✖</button>
+    
+    <!-- Scroll buttons -->
+    <div class="scroll-buttons">
+        <button onclick="scrollMessage(-50)">⬆️ Scroll Up</button>
+        <button onclick="scrollMessage(50)">⬇️ Scroll Down</button>
+    </div>
+
+    <div id="scrollableMessage">
+        <p>Happy 58 months of loving love. Inaramidan ka iti code love tapno ma feel mo met maaramidan iti website para lang kanyam love. Every effort ko nga nagaramid atuy love ket dedicated amin para kanyam lang sika ti kauna unahan nga incodak iti kastuy kabayak kin romantic. Oray narigat ket aramidek para kanyam lang love oray natrabaho. Stay strong kanyata love, More laughs kin away haahhah Celebrate ta man iti monthsary'n nag pardas love. Happy monthsary and ILOVEYOU LOVE❤️</p>
+    </div>
+
+    <img src="gift.jpg" alt="Gift" class="gift">
+</div>
+
     </main>
     <footer>
         <p>Created with love by BJ</p>

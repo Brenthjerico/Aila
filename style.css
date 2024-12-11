@@ -223,3 +223,23 @@ button {
         width: 80px; /* Adjust gift image size for small screens */
     }
 }
+
+.scroll-buttons {
+    margin: 10px 0; /* Add some space around the buttons */
+}
+
+.scroll-buttons button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-buttons button:hover {
+    background-color: #ff8a75;
+}
+

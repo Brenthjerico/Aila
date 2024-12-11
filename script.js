@@ -19,3 +19,10 @@ function closeGiftPopup() {
     document.getElementById('overlay').style.display = 'none';
 }
 
+function scrollMessage(direction) {
+    const messageContainer = document.getElementById('scrollableMessage');
+    messageContainer.scrollBy({
+        top: direction, // Positive value scrolls down, negative value scrolls up
+        behavior: 'smooth' // Optional: makes the scrolling smooth
+    });
+}
