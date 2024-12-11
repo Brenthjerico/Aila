@@ -17,9 +17,9 @@
         </section>
         <section id="images">
             <h2>Memories Together</h2>
-            <img src="image1.jpg" alt="Memory 1" class="memory">
-            <img src="image2.jpg" alt="Memory 2" class="memory">
-            <img src="image3.jpg" alt="Memory 3" class="memory">
+            <img src="image1.jpg" alt="Memory 1" class="memory" onclick="showLetter('Baguio trip love oray naka adadayo jay byahe ket naanusan ta latta oray nag lamiis ken nag kittang ag motor pero sulit amin ta kadwa ka')">
+            <img src="image2.jpg" alt="Memory 2" class="memory" onclick="showLetter('Masetta beach love memorable met lang atuy love kase nag stay ta dijay ti 1day pati panag luto kada apa kada aglalaok pero mayat nga memories atuy metlang love')">
+            <img src="image3.jpg" alt="Memory 3" class="memory" onclick="showLetter('')">
         </section>
         <button onclick="showLoveMessage()">Click for a Surprise!</button>
         <div id="surprise" style="display: none;">
@@ -29,6 +29,31 @@
     <footer>
         <p>Created with love by BJ</p>
     </footer>
+
+    <div id="overlay" onclick="closePopup()"></div>
+    <div id="letterPopup">
+        <span class="close" onclick="closePopup()">✖</span>
+        <p id="letterMessage"></p>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        function showLetter(message) {
+            const letterMessage = document.getElementById('letterMessage');
+            letterMessage.textContent = message;  // Display the specific letter/message
+            document.getElementById('letterPopup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('letterPopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showLoveMessage() {
+            const surprise = document.getElementById('surprise');
+            surprise.style.display = 'block'; // Show the love message
+        }
+    </script>
 </body>
 </html>

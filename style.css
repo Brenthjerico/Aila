@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0e68c;
-    color: #333;
+    color: #333; /* This is the default text color */
     line-height: 1.6;
     text-align: center;
 }
 
 header {
     background-color: #ff6f61;
-    color: white;
+    color: #ffffff; /* White text color for the header */
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -21,11 +21,13 @@ main {
 
 h1, h2 {
     margin: 20px 0;
+    color: #2c3e50; /* Change heading colors to a darker shade */
 }
 
 #message p {
     font-size: 18px;
     margin: 10px 0 20px;
+    color: #4a4a4a; /* Change paragraph text color within #message */
 }
 
 #images {
@@ -48,5 +50,64 @@ h1, h2 {
     transform: scale(1.05);
 }
 
-button {
-    
+#letterPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(228, 0, 0);
+    border: 2px solid #160b0a;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: white; /* Change text color in the popup to white */
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+.close {
+    cursor: pointer;
+    color: #ff6f61; /* Keep the close button color */
+    font-weight: bold;
+}
+#images {
+    position: relative; /* Allows positioning of child elements */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+#images h2 {
+    position: absolute; /* Allows it to be positioned over images */
+    top: 10px; /* Adjusts the vertical position */
+    left: 50%; /* Centers the heading */
+    transform: translateX(-50%); /* Centers the heading */
+    background-color: rgba(255, 255, 255, 0.7); /* Background for readability */
+    padding: 10px; /* Adds some padding around the text */
+    border-radius: 5px; /* Rounds the corners */
+    z-index: 10; /* Ensures it is above the images */
+}
+
+.memory {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.memory:hover {
+    transform: scale(1.05);
+}
